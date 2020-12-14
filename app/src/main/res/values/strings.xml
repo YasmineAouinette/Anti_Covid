@@ -9,4 +9,6 @@
     <string name="aide4">Autre aide</string>
     <string name="typeAide">Veuillez expliquer le type d\'assistance</string>
     <string name="button">Envoyer de l\'aide</string>
+    <string name="tabbord">Tableau de bord</string>
+    <string name="btnbesoin">J\'ai besoin d\'aide</string>
 </resources>
