@@ -11,7 +11,7 @@
         android:id="@+id/tabbord"
         android:layout_width="291dp"
         android:layout_height="72dp"
-        android:text="@string/tabbord"
+        android:text="@string/dashboard"
         android:textColor="@color/colorWhite"
         android:textSize="36sp"
         android:textStyle="bold"
