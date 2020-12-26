@@ -81,6 +81,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <RadioButton
                 android:id="@+id/floatingActionButton2"
                 android:layout_width="wrap_content"
@@ -219,7 +220,7 @@
         android:rotationY="4"
         android:translationX="50dp"
         android:translationY="650dp"
-        app:cardBackgroundColor="#FF03DAC5"
+        app:cardBackgroundColor="@color/teal_200"
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp">
 
@@ -227,14 +228,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
+            <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="@string/button"
-                android:textColor="@color/purple_700"
-                android:textSize="24sp" />
+                android:textColor="@color/purple_500"
+                android:textSize="24sp"
+                android:backgroundTint="@color/teal_200"/>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
