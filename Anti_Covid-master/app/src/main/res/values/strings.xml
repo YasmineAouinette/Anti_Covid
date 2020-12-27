@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AntiCovid</string>
+    <string name="text1">Ou</string>
+    <string name="text2">Choisissez le type d\'assistance et vous serez contacté</string>
+    <string name="appel">Appeler 190</string>
+    <string name="aide1">J\'ai des symptomes</string>
+    <string name="aide2">Changer le site d\'isolement sanitaire</string>
+    <string name="aide3">Changer le numéro de mobile ou l\'appareil utilisé</string>
+    <string name="aide4">Autre aide</string>
+    <string name="typeAide">Veuillez expliquer le type d\'assistance</string>
+    <string name="button">Envoyer de l\'aide</string>
+    <string name="tabbord">Tableau de bord</string>
+    <string name="btnbesoin">J\'ai besoin d\'aide</string>
+</resources>
