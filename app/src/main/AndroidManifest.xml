@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.mdw31g1.anticovid">
 
     <application
@@ -8,6 +9,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AntiCovid"></application>
+        android:theme="@style/Theme.AntiCovid">
+        <uses-feature android:name="android.hardware.telephony"
+            android:required="true"
+            tools:ignore="WrongManifestParent" />
+        <uses-permission android:name="android.permission.CALL_PHONE"
+            tools:ignore="WrongManifestParent" />
+
+
+    </application>
 
 </manifest>
