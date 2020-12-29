@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/btn_bg"
-        android:drawableLeft="@android:drawable/stat_sys_phone_call"
+        android:drawableStart="@android:drawable/stat_sys_phone_call"
         android:text="@string/appel"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
