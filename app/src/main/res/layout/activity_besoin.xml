@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BesoinActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     android:background="@drawable/bb">
+
+    <Button
+        android:id="@+id/buttonAppel"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_bg"
+        android:drawableLeft="@android:drawable/stat_sys_phone_call"
+        android:text="@string/appel"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        android:translationY="50dp"
+        app:backgroundTint="@color/teal_200" />
 
     <View
         android:id="@+id/divider"
@@ -13,235 +29,111 @@
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
         android:translationX="25sp"
-        android:translationY="131sp" />
+        android:translationY="70dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/ou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ou"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:translationX="190sp"
-        android:translationY="140sp" />
+        android:translationY="80sp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/choisir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/choisie_aide"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
-        android:translationX="30sp"
-        android:translationY="160sp" />
+        android:translationX="24sp"
+        android:translationY="90sp" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:rotationY="4"
-        android:translationX="50dp"
-        android:translationY="50dp"
-        app:cardBackgroundColor="@color/purple_700"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
-            <Button
-                android:id="@+id/buttonAppel"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/btn_bg"
-                android:drawableLeft="@android:drawable/stat_sys_phone_call"
-                android:gravity="center"
-                android:text="@string/appel"
-                android:textAlignment="center"
-                app:backgroundTint="@color/teal_200"
-                android:textColor="@color/purple_700"
-                android:textSize="20sp"
-                android:onClick=""
-                tools:ignore="OnClick" />
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:rotationY="4"
-        android:translationX="50dp"
-        android:translationY="210dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RadioButton
-                android:id="@+id/floatingActionButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true" />
-
-            <TextView
-                android:id="@+id/aide1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/aide1"
-                android:textColor="@color/purple_700"
-                android:textSize="20sp" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:rotationY="4"
-        android:translationX="50dp"
-        android:translationY="300dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RadioButton
-                android:id="@+id/floatingActionButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true" />
-
-            <TextView
-                android:id="@+id/aide2"
-                android:layout_width="280dp"
-                android:layout_height="140dp"
-                android:text="@string/aide2"
-                android:textColor="@color/purple_700"
-                android:textSize="20sp"
-                android:translationX="48dp"/>
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:rotationY="4"
-        android:translationX="50dp"
-        android:translationY="390dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RadioButton
-                android:id="@+id/floatingActionButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true" />
-
-            <TextView
-                android:id="@+id/aide3"
-                android:layout_width="240dp"
-                android:layout_height="140dp"
-                android:text="@string/aide3"
-                android:textColor="@color/purple_700"
-                android:textSize="20sp"
-                android:translationX="50dp"
-               />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:rotationY="4"
-        android:translationX="50dp"
-        android:translationY="480dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RadioButton
-                android:id="@+id/floatingActionButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true" />
-
-            <TextView
-                android:id="@+id/aide4"
-                android:layout_width="240dp"
-                android:layout_height="140dp"
-                android:text="@string/aide4"
-                android:textColor="@color/purple_700"
-                android:textSize="20sp"
-                android:translationX="55dp" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
 
     <EditText
         android:id="@+id/typeAide"
         android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:textColor="#FF03DAC5"
+        android:layout_height="65dp"
+        android:textColor="@color/teal_200"
         android:textSize="18sp"
         android:translationX="50dp"
-        android:translationY="550dp"
+        android:translationY="400dp"
         android:text="@string/typeAide"
         android:autofillHints="@string/typeAide" />
 
-    <androidx.cardview.widget.CardView
+    <Button
+        android:id="@+id/buttonEnvoyerAide"
         android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:rotationY="4"
-        android:translationX="50dp"
-        android:translationY="650dp"
-        app:cardBackgroundColor="@color/teal_200"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_bg"
+        android:text="@string/button_envoyer_aide"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        android:translationY="460dp"
+        app:backgroundTint="@color/teal_200" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:background="@drawable/btn_bg"
-                android:text="@string/button_envoyer_aide"
-                android:textColor="@color/purple_700"
-                app:backgroundTint="@color/teal_200"/>
+        <RadioButton
+            android:id="@+id/aide1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg"
+            android:text="@string/aide1"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/purple_700"
+            android:translationY="20dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
-        </RelativeLayout>
+        <RadioButton
+            android:id="@+id/aide2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg"
+            android:text="@string/aide2"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/purple_700"
+            android:translationY="40dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
-    </androidx.cardview.widget.CardView>
+        <RadioButton
+            android:id="@+id/aide3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg"
+            android:text="@string/aide3"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/purple_700"
+            android:translationY="60dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
-</RelativeLayout>
+        <RadioButton
+            android:id="@+id/aide4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg"
+            android:text="@string/aide4"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/purple_700"
+            android:translationY="80dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -11,7 +11,7 @@
     <string name="typeAide">Veuillez expliquer le type d"assistance</string>
     <string name="button_envoyer_aide">Envoyer de l"aide</string>
     activity dashboard
-    <string name="tabbord">Tableau de bord</string>
+    <string name="dashboard">Tableau de bord</string>
     <string name="btnbesoin">J"ai besoin d"aide</string>
     activity register
     <string name="inscription">Inscription</string>
@@ -20,7 +20,7 @@
     <string name="pass">Mot de passe</string>Confirmer le mot de passe
     <string name="confirm_pass">Confirmer le mot de passe</string>
     <string name="compte_exist">Vous avez un compte!</string>
-     activity advice
+    activity advice
     <string name="utiliser_le_masque_medical">Utiliser le masque medical</string>
     <string name="utiliser_le_gel_hydroalcoolique">Utiliser le gel hydroalcoolique</string>
     <string name="restez_la_maison">Restez à la maison</string>

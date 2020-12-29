@@ -10,11 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AntiCovid">
-        <uses-feature android:name="android.hardware.telephony"
-            android:required="true"
-            tools:ignore="WrongManifestParent" />
-        <uses-permission android:name="android.permission.CALL_PHONE"
-            tools:ignore="WrongManifestParent" />
+        <activity android:name=".BesoinActivity"
+            tools:ignore="MissingClass">
+            <uses-feature
+                android:name="android.hardware.telephony"
+                android:required="true"
+                tools:ignore="WrongManifestParent" />
+
+            <uses-permission
+                android:name="android.permission.CALL_PHONE"
+                tools:ignore="WrongManifestParent" />
+        </activity>
 
 
     </application>

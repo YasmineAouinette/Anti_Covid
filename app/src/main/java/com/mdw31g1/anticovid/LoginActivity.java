@@ -13,11 +13,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         TextView btn=findViewById(R.id.textViewSignUp);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //startActivity(onNewIntent(LoginActivity.this.RegisterActivity.class));
-            }
+        btn.setOnClickListener(v -> {
+            //startActivity(onNewIntent(LoginActivity.this.RegisterActivity.class));
         });
     }
 }
