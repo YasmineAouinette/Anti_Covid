@@ -21,24 +21,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inputPassword"
+        android:id="@+id/inputPasssword"
         android:layout_width="314dp"
         android:layout_height="47dp"
         android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:background="@drawable/input_bg"
-        android:drawableStart="@drawable/ic_person"
+        android:drawableStart="@drawable/ic_security"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingBottom="10dp"
-        android:text="Nom Utilisateur"
         android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -50,23 +48,20 @@
         android:layout_width="314dp"
         android:layout_height="51dp"
         android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:background="@drawable/input_bg"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:hint="Email"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingBottom="10dp"
-        android:text="Email"
         android:textColor="@color/colorWhite"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/inputPasssword"
+        app:layout_constraintStart_toStartOf="@+id/inputPasssword"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <TextView
@@ -77,10 +72,10 @@
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/inputPasssword"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+        app:layout_constraintStart_toStartOf="@+id/inputPasssword"
+        app:layout_constraintTop_toBottomOf="@+id/inputPasssword" />
 
     <Button
         android:id="@+id/btnlogin"
@@ -91,8 +86,8 @@
         android:text="Connexion"
         android:textColor="@color/purple_700"
         app:backgroundTint="@color/teal_200"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/inputPasssword"
+        app:layout_constraintStart_toStartOf="@+id/inputPasssword"
         app:layout_constraintTop_toBottomOf="@+id/ForgotMPasse" />
 
     <LinearLayout
@@ -123,45 +118,38 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btngoogle"
-        android:layout_width="141dp"
-        android:layout_height="56dp"
-        android:layout_marginEnd="48dp"
+        android:id="@+id/btnGoogle"
+        android:layout_width="136dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
         android:background="@drawable/btn_bg"
         android:drawableStart="@drawable/ic_google"
-        android:drawablePadding="10dp"
-        android:gravity="center"
-        android:paddingStart="30dp"
-
-        android:text="Google"
-        android:textAlignment="center"
+        android:text="GOOGLE"
         android:textAllCaps="false"
-        android:textColor="@color/cardview_dark_background"
-        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="@+id/btnFcbk"
-        app:layout_constraintEnd_toStartOf="@+id/btnFcbk"
-        app:layout_constraintTop_toTopOf="@+id/btnFcbk"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.195" />
 
     <Button
-        android:id="@+id/btnFcbk"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="48dp"
+        android:id="@+id/btnFacebook"
+        android:layout_width="138dp"
+        android:layout_height="55dp"
         android:background="@drawable/btn_bg"
+        android:clickable="true"
         android:drawableStart="@drawable/ic_facebook"
-        android:drawablePadding="10dp"
-        android:gravity="center"
-        android:paddingStart="30dp"
         android:text="Facebook"
-        android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/cardview_dark_background"
+        android:textColor="@color/colorPrimaryDark"
         app:backgroundTint="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/btnGoogle"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="222dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.199" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
