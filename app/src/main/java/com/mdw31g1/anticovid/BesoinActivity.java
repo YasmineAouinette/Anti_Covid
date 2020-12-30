@@ -1,38 +1,40 @@
 package com.mdw31g1.anticovid;
 
-import android.content.ComponentName;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class BesoinActivity extends AppCompatActivity {
-
+    RadioGroup radioGroup;
+    RadioButton radioButton;
+    Button btAppel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_besoin);
 
-        Button buttonAppel = findViewById(R.id.buttonAppel);
-        buttonAppel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri telephone = Uri.parse("tel:190");
-                Intent secondeActivity = new Intent(Intent.ACTION_DIAL, telephone);
-                PackageManager manager = getPackageManager();
-                ComponentName component = secondeActivity.resolveActivity(manager);
-                // On vérifie que component n'est pas null
-                if (component != null) {
-                    startActivity(secondeActivity);
-                    finish();
-                }
-            }
+        btAppel = findViewById(R.id.buttonAppel);
+        btAppel.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:190"));
+            startActivity(intent);
         });
+        radioGroup = findViewById(R.id.radiogroup);
+    }
 
+    public void onClickListenerButton(View view) {
+        int radioId = radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(radioId);
+        Toast.makeText(this,"Ton aide est"+radioButton.getText(), Toast.LENGTH_SHORT).show();
 
     }
+
+
 }

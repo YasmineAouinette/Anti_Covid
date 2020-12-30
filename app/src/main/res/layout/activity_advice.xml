@@ -9,100 +9,111 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/conseil4"
         android:layout_width="138dp"
         android:layout_height="52dp"
         android:background="@color/teal_200"
         android:text="@string/respectez_la_distanciation_sociale"
         tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="673dp" />
+        tools:layout_editor_absoluteY="673dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/conseil3"
         android:layout_width="138dp"
         android:layout_height="52dp"
         android:background="@color/teal_200"
         android:text="@string/restez_la_maison"
         tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="458dp" />
+        tools:layout_editor_absoluteY="458dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/conseil5"
         android:layout_width="140dp"
         android:layout_height="55dp"
         android:background="@color/teal_200"
         android:text="@string/lavez_vos_mains"
         tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="670dp" />
+        tools:layout_editor_absoluteY="670dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/conseil2"
         android:layout_width="142dp"
         android:layout_height="61dp"
         android:background="@color/teal_200"
         android:text="@string/utiliser_le_gel_hydroalcoolique"
         tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="256dp" />
+        tools:layout_editor_absoluteY="256dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/conseils"
         android:layout_width="416dp"
         android:layout_height="100dp"
         android:background="@color/teal_200"
         android:text="@string/conseils"
         android:textSize="36sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="-3dp" />
+        tools:layout_editor_absoluteX="-3sp"
+        tools:layout_editor_absoluteY="-3sp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/masque"
         android:layout_width="142dp"
         android:layout_height="143dp"
         app:srcCompat="@drawable/_5244822__2_"
         tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="114dp" />
+        tools:layout_editor_absoluteY="114dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/conseil1"
         android:layout_width="142dp"
         android:layout_height="63dp"
         android:background="@color/teal_200"
         android:text="@string/utiliser_le_masque_medical"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="254dp" />
+        tools:layout_editor_absoluteX="33sp"
+        tools:layout_editor_absoluteY="254sp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/gel"
         android:layout_width="151dp"
         android:layout_height="145dp"
         app:srcCompat="@drawable/_5244822__3_"
         tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="114dp" />
+        tools:layout_editor_absoluteY="114dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/distance"
         android:layout_width="146dp"
         android:layout_height="150dp"
         app:srcCompat="@drawable/_5244822__4_"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="523dp" />
+        tools:layout_editor_absoluteY="523dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/laver_mains"
         android:layout_width="139dp"
         android:layout_height="150dp"
         app:srcCompat="@drawable/_5244822__5_"
         tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="523dp" />
+        tools:layout_editor_absoluteY="523dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/_5244822__6_"
         tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="317dp" />
+        tools:layout_editor_absoluteY="317dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

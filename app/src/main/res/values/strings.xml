@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">AntiCovid</string>
+    activity besoin
     <string name="ou">Ou</string>
     <string name="choisie_aide">Choisissez le type d\'assistance et vous serez contacté</string>
     <string name="appel">Appeler 190</string>
@@ -9,13 +10,22 @@
     <string name="aide4">Autre aide</string>
     <string name="typeAide">Veuillez expliquer le type d"assistance</string>
     <string name="button_envoyer_aide">Envoyer de l"aide</string>
-    <string name="tabbord">Tableau de bord</string>
+    activity dashboard
+    <string name="dashboard">Tableau de bord</string>
     <string name="btnbesoin">J"ai besoin d"aide</string>
+    activity register
     <string name="inscription">Inscription</string>
     <string name="nom_utilisateur">Nom Utilisateur</string>
     <string name="email">Email</string>
     <string name="pass">Mot de passe</string>Confirmer le mot de passe
     <string name="confirm_pass">Confirmer le mot de passe</string>
     <string name="compte_exist">Vous avez un compte!</string>
+    activity advice
+    <string name="utiliser_le_masque_medical">Utiliser le masque medical</string>
+    <string name="utiliser_le_gel_hydroalcoolique">Utiliser le gel hydroalcoolique</string>
+    <string name="restez_la_maison">Restez à la maison</string>
+    <string name="respectez_la_distanciation_sociale">Respectez la distanciation sociale</string>
+    <string name="lavez_vos_mains">Lavez vos mains</string>
+    <string name="conseils">Conseils</string>
 
 </resources>
