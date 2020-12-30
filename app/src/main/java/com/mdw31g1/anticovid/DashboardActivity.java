@@ -3,6 +3,7 @@ package com.mdw31g1.anticovid;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
