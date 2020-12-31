@@ -57,7 +57,8 @@
         app:srcCompat="@drawable/_5244822__3_"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="94dp" />
+        tools:layout_editor_absoluteY="94dp"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/conseil2"
@@ -76,7 +77,8 @@
         app:srcCompat="@drawable/_5244822__2_"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="96dp" />
+        tools:layout_editor_absoluteY="96dp"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/conseil1"
@@ -95,7 +97,8 @@
         app:srcCompat="@drawable/_5244822__4_"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="523dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/laver_mains"
@@ -104,7 +107,8 @@
         app:srcCompat="@drawable/_5244822__5_"
         tools:layout_editor_absoluteX="221dp"
         tools:layout_editor_absoluteY="523dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/home"
@@ -113,7 +117,8 @@
         app:srcCompat="@drawable/_5244822__6_"
         tools:layout_editor_absoluteX="122dp"
         tools:layout_editor_absoluteY="317dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

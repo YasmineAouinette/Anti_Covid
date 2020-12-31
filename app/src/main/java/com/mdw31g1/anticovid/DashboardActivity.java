@@ -3,7 +3,7 @@ package com.mdw31g1.anticovid;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toolbar;
-import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -31,19 +31,16 @@ public class DashboardActivity extends AppCompatActivity {
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                        // set item as selected to persist highlight
-                        menuItem.setChecked(true);
-                        // close drawer when item is tapped
-                        mDrawerLayout.closeDrawers();
+                menuItem -> {
+                    // set item as selected to persist highlight
+                    menuItem.setChecked(true);
+                    // close drawer when item is tapped
+                    mDrawerLayout.closeDrawers();
 
-                        // Add code here to update the UI based on the item selected
-                        // For example, swap UI fragments here
+                    // Add code here to update the UI based on the item selected
+                    // For example, swap UI fragments here
 
-                        return true;
-                    }
+                    return true;
                 });
     }
 

@@ -37,4 +37,5 @@ public class BesoinActivity extends AppCompatActivity {
     }
 
 
-}
+    public void onClick(View view) {
+    }}
