@@ -34,5 +34,8 @@
     <string name="respectez_la_distanciation_sociale">Respectez la distanciation sociale</string>
     <string name="lavez_vos_mains">Lavez vos mains</string>
     <string name="conseils">Conseils</string>
+    <string name="facebook_app_id">399799611328903</string>
+    <string name="fb_login_protocol_scheme">fb399799611328903</string>
+
 
 </resources>

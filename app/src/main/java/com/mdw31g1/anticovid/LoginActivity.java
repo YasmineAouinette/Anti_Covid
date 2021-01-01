@@ -1,5 +1,6 @@
 package com.mdw31g1.anticovid;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +9,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -31,7 +40,10 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private ProgressDialog mloadingBar;
     GoogleSignInClient mGoogleSignInClient;
+    CallbackManager mCallbackManager;
+    LoginButton loginButton;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,10 +70,30 @@ public class LoginActivity extends AppCompatActivity {
         Button btnGoogle = findViewById(R.id.btnGoogle);
         btnGoogle.setOnClickListener(v -> signIn());
 
+     //intitialisation de facebook sdk
+        FacebookSdk.sdkInitialize(LoginActivity.this);
+
+        // Initialize Facebook Login button
+         mCallbackManager = CallbackManager.Factory.create();
+        loginButton =findViewById(R.id.btnFacebook);
+        loginButton.setReadPermissions("email", "public_profile");
+        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                checkIdentifiants();
+            }
+            @Override
+            public void onCancel() {
+            }
+            @Override
+            public void onError(FacebookException error) {
+            }
+        });
 
         btnLogin = findViewById(R.id.btnlogin);
         btnLogin.setOnClickListener(v -> checkIdentifiants());
     }
+
 
     // verification des identifiants
     private void checkIdentifiants() {
@@ -102,6 +134,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
@@ -126,17 +159,17 @@ public class LoginActivity extends AppCompatActivity {
                         // Sign in success, update UI with the signed-in user's information
                         FirebaseUser user = mAuth.getCurrentUser();
                         Toast.makeText(LoginActivity.this,user.getEmail() + user.getDisplayName(), Toast.LENGTH_SHORT).show();
-                        updateUI(user);
+                        updateUI();
                     } else {
                         // If sign in fails, display a message to the user.
                         Toast.makeText(LoginActivity.this,task.getException().toString(), Toast.LENGTH_SHORT).show();
-                        updateUI(null);
+                        updateUI();
                     }
 
                 });
     }
 
-    private void updateUI(FirebaseUser user) {
+    private void updateUI() {
         Intent intent=new Intent(LoginActivity.this,DashboardActivity.class);
         startActivity(intent);
     }
