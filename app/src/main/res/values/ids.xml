@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="buttonAide" type="id">buttonAide</item>
+    <item name="buttonConseils" type="id">buttonConseils</item>
+</resources>
