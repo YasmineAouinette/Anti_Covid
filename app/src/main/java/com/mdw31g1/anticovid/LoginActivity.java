@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -42,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     CallbackManager mCallbackManager;
     LoginButton loginButton;
+    private TextView ForgotMPasse;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -57,6 +59,15 @@ public class LoginActivity extends AppCompatActivity {
         inputPassword = findViewById(R.id.inputpassword);
         mAuth = FirebaseAuth.getInstance();
         mloadingBar = new ProgressDialog(LoginActivity.this);
+
+        ForgotMPasse=findViewById(R.id.ForgotMPasse);
+        ForgotMPasse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText resetEmail= new EditText(v.getContext());
+
+            }
+        });
 
         // Configure sign-in to request the user's ID, email address, and basic
        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
