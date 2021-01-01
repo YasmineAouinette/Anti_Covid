@@ -21,9 +21,7 @@
         android:textColor="@color/purple_700"
         android:textSize="20sp"
         android:translationY="50dp"
-        app:backgroundTint="@color/teal_200"
-        android:onClick="onClick"
-        tools:ignore="OnClick" />
+        app:backgroundTint="@color/teal_200" />
 
     <View
         android:id="@+id/divider"
@@ -38,33 +36,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ou"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:translationX="190sp"
-        android:translationY="60sp" />
+        android:translationY="60sp"/>
 
     <TextView
         android:id="@+id/choisir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/choisie_aide"
-        android:textColor="@color/colorWhite"
+        android:text="@string/choisieAide"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:translationX="24sp"
         android:translationY="70sp" />
-
-    <EditText
-        android:id="@+id/typeAide"
-        android:layout_width="305dp"
-        android:layout_height="70dp"
-        android:textColor="@color/teal_200"
-        android:textSize="18sp"
-        android:translationX="50dp"
-        android:translationY="350dp"
-        android:hint="@string/typeAide"
-        android:autofillHints="@string/typeAide"
-        android:inputType="textCapSentences"
-        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/buttonEnvoi"
@@ -93,12 +78,11 @@
             android:layout_gravity="center"
             android:background="@drawable/btn_bg"
             android:checked="true"
-            android:onClick="onClickListenerButton"
             android:text="@string/aide1"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/purple_700"
-            android:translationY="0dp"
-            />
+            android:translationY="25dp"
+            android:onClick="checkButton"/>
 
         <RadioButton
             android:id="@+id/aide2"
@@ -106,11 +90,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/btn_bg"
-            android:onClick="onClickListenerButton"
             android:text="@string/aide2"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/purple_700"
-            android:translationY="10dp" />
+            android:translationY="45dp"
+            android:onClick="checkButton"/>
 
         <RadioButton
             android:id="@+id/aide3"
@@ -118,24 +102,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/btn_bg"
-            android:onClick="onClickListenerButton"
             android:text="@string/aide3"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/purple_700"
-            android:translationY="20dp"/>
-
+            android:translationY="65dp"
+            android:onClick="checkButton"/>
         <RadioButton
             android:id="@+id/aide4"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/btn_bg"
-            android:onClick="onClickListenerButton"
             android:text="@string/aide4"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/purple_700"
-            android:translationY="30dp"/>
-
+            android:translationY="85dp"
+            android:onClick="checkButton"/>
     </RadioGroup>
 
 </LinearLayout>

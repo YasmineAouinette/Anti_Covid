@@ -2,7 +2,7 @@
     <string name="app_name">AntiCovid</string>
     activity besoin
     <string name="ou">Ou</string>
-    <string name="choisie_aide">Choisissez le type d\'assistance et vous serez contacté</string>
+    <string name="choisieAide">Choisissez le type d\'assistance et vous serez contacté</string>
     <string name="appel">Appeler 190</string>
     <string name="aide1">J"ai des symptomes</string>
     <string name="aide2">Changer le site d\'isolement sanitaire</string>
