@@ -6,6 +6,7 @@ import android.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 
@@ -42,6 +43,10 @@ public class DashboardActivity extends AppCompatActivity {
                     return true;
                 });
     }
+
+    private void setSupportActionBar(Toolbar toolbar) {
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             mDrawerLayout.openDrawer(GravityCompat.START);
