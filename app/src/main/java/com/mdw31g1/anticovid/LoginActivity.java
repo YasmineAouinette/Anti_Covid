@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -31,6 +30,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 105;
@@ -43,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     CallbackManager mCallbackManager;
     LoginButton loginButton;
-    private TextView ForgotMPasse;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -60,13 +60,10 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mloadingBar = new ProgressDialog(LoginActivity.this);
 
-        ForgotMPasse=findViewById(R.id.ForgotMPasse);
-        ForgotMPasse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText resetEmail= new EditText(v.getContext());
+        TextView forgotMPasse = findViewById(R.id.ForgotMPasse);
+        forgotMPasse.setOnClickListener(v -> {
+            EditText resetEmail= new EditText(v.getContext());
 
-            }
         });
 
         // Configure sign-in to request the user's ID, email address, and basic
@@ -154,6 +151,7 @@ public class LoginActivity extends AppCompatActivity {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
+                assert account != null;
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
@@ -169,11 +167,12 @@ public class LoginActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
                         FirebaseUser user = mAuth.getCurrentUser();
+                        assert user != null;
                         Toast.makeText(LoginActivity.this,user.getEmail() + user.getDisplayName(), Toast.LENGTH_SHORT).show();
                         updateUI();
                     } else {
                         // If sign in fails, display a message to the user.
-                        Toast.makeText(LoginActivity.this,task.getException().toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, Objects.requireNonNull(task.getException()).toString(), Toast.LENGTH_SHORT).show();
                         updateUI();
                     }
 
