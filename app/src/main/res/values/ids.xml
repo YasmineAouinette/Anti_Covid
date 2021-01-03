@@ -2,4 +2,5 @@
 <resources>
     <item name="buttonAide" type="id">buttonAide</item>
     <item name="buttonConseils" type="id">buttonConseils</item>
+    <item name="nav_view" type="id" />
 </resources>
