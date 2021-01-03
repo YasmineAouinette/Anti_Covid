@@ -3,7 +3,7 @@ package com.mdw31g1.anticovid;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toolbar;
-import androidx.core.view.GravityCompat;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -19,7 +19,7 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar();
 
         ActionBar actionbar = getSupportActionBar();
         if (actionbar != null) {
@@ -44,7 +44,7 @@ public class DashboardActivity extends AppCompatActivity {
                 });
     }
 
-    private void setSupportActionBar(Toolbar toolbar) {
+    private void setSupportActionBar() {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
