@@ -1,17 +1,18 @@
 package com.mdw31g1.anticovid;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
+import android.graphics.BitmapFactory;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import android.widget.Toast;
+import android.graphics.Bitmap;
+
 public class ImportImage  extends AppCompatActivity {
         private Button btnImport;
         private ImageView selectedImg;
@@ -23,7 +24,7 @@ public class ImportImage  extends AppCompatActivity {
             setContentView(R.menu.drawer_view);
 
             btnImport = findViewById(R.id.nav_camera);
-            selectedImg = findViewById(R.id.selected);
+            selectedImg = findViewById(R.id.logo);
             btnImport.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
